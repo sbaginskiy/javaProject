@@ -1,5 +1,7 @@
 package main.java.software.jevera.domain;
 
-public class Calendar {
+public enum RoomKey {
+
+BIG, SMALL
 
 }

@@ -1,18 +1,44 @@
 package main.java.software.jevera.domain;
 
+
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
 
 public class Event {
 
     private Long id;
-    private String day;
+    private EventType type;
     private Instant startTime;
     private Instant endTime;
     private User user;
     private List<User> invited = new ArrayList<>();
     private String description;
+
+    public Event(Instant startTime, Instant endTime, User user, List<User> invited, String description) {
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.user = user;
+        this.invited = invited;
+        this.description = description;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Event event = (Event) o;
+        return Objects.equals(startTime, event.startTime) &&
+                Objects.equals(endTime, event.endTime);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(startTime, endTime);
+    }
 
     public Long getId() {
         return id;
@@ -20,14 +46,6 @@ public class Event {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getDay() {
-        return day;
-    }
-
-    public void setDay(String day) {
-        this.day = day;
     }
 
     public Instant getStartTime() {
@@ -71,6 +89,16 @@ public class Event {
     }
 
 
+    public EventType getType() {
+        return type;
+    }
 
-
+    public void setType(EventType type) {
+        this.type = type;
+    }
 }
+
+
+
+
+
