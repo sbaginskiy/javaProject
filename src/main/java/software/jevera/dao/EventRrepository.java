@@ -11,6 +11,5 @@ public interface EventRrepository {
 
     List<Event> findAll();
 
-    boolean checkTime(Instant startTime, Instant endTime);
 
 }

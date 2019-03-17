@@ -1,7 +1,8 @@
 package main.java.software.jevera.domain;
 
 
-import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -11,34 +12,16 @@ public class Event {
 
     private Long id;
     private EventType type;
-    private Instant startTime;
-    private Instant endTime;
-    private User user;
+    private String day;              // поле day использую только для Event с типом ONCE
+    private LocalDate date;
+    private LocalTime timeFrom;
+    private LocalTime timeTo;
+    private LocalDate startTime;     //  поля startTime и endTime только для Event с типом PERIODIC
+    private LocalDate endTime;       // Вопрос: есть ли смысл делать класс Event классом для наследывания для двух других
+    private User eventOwner;         // например EventOnce и EventPeriodic
     private List<User> invited = new ArrayList<>();
     private String description;
-
-    public Event(Instant startTime, Instant endTime, User user, List<User> invited, String description) {
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.user = user;
-        this.invited = invited;
-        this.description = description;
-    }
-
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Event event = (Event) o;
-        return Objects.equals(startTime, event.startTime) &&
-                Objects.equals(endTime, event.endTime);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(startTime, endTime);
-    }
+    private Room room;
 
     public Long getId() {
         return id;
@@ -48,28 +31,76 @@ public class Event {
         this.id = id;
     }
 
-    public Instant getStartTime() {
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
+    public EventType getType() {
+        return type;
+    }
+
+    public void setType(EventType type) {
+        this.type = type;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public LocalTime getTimeFrom() {
+        return timeFrom;
+    }
+
+    public void setTimeFrom(LocalTime timeFrom) {
+        this.timeFrom = timeFrom;
+    }
+
+    public LocalTime getTimeTo() {
+        return timeTo;
+    }
+
+    public void setTimeTo(LocalTime timeTo) {
+        this.timeTo = timeTo;
+    }
+
+    public LocalDate getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Instant startTime) {
+    public void setStartTime(LocalDate startTime) {
         this.startTime = startTime;
     }
 
-    public Instant getEndTime() {
+    public LocalDate getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Instant endTime) {
+    public void setEndTime(LocalDate endTime) {
         this.endTime = endTime;
     }
 
-    public User getUser() {
-        return user;
+    public User getEventOwner() {
+        return eventOwner;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setEventOwner(User eventOwner) {
+        this.eventOwner = eventOwner;
     }
 
     public List<User> getInvited() {
@@ -88,17 +119,19 @@ public class Event {
         this.description = description;
     }
 
-
-    public EventType getType() {
-        return type;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Event event = (Event) o;
+        return Objects.equals(id, event.id);
     }
 
-    public void setType(EventType type) {
-        this.type = type;
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
-
-
 
 
 

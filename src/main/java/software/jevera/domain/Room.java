@@ -5,23 +5,17 @@ import java.util.List;
 
 public class Room {
 
-    private List<Event> events = new ArrayList();
+ String type;
 
-    private RoomKey key;
-
-    public List<Event> getEvents() {
-        return events;
+    public Room(String type) {
+        this.type = type;
     }
 
-    public void setEvents(List<Event> events) {
-        this.events = events;
+    public String getType() {
+        return type;
     }
 
-    public RoomKey getKey() {
-        return key;
-    }
-
-    public void setKey(RoomKey key) {
-        this.key = key;
+    public void setType(String type) {
+        this.type = type;
     }
 }

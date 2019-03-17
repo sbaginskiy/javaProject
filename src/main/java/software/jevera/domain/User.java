@@ -1,12 +1,17 @@
 package main.java.software.jevera.domain;
 
+import java.util.Objects;
+
 public class User {
     private String login;
-    private String password;
+    private String passwordHash;
 
-    public User(String login, String password) {
+    public User() {
+    }
+
+    public User(String login, String passwordHash) {
         this.login = login;
-        this.password = password;
+        this.passwordHash = passwordHash;
     }
 
     public String getLogin() {
@@ -17,11 +22,24 @@ public class User {
         this.login = login;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPasswordHash() {
+        return passwordHash;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(login, user.login);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(login);
     }
 }
