@@ -24,11 +24,9 @@ import java.util.stream.Collectors;
 public class EventService {
 
     private final EventRrepository eventRrepository;
-    private final UserRepository userRrepository;
 
-    public EventService(EventRrepository eventRrepository, UserRepository userRrepository) {
+    public EventService(EventRrepository eventRrepository) {
         this.eventRrepository = eventRrepository;
-        this.userRrepository = userRrepository;
     }
 
     public Event createEvent(Event event, User user) {
@@ -116,5 +114,7 @@ public class EventService {
                 .collect(Collectors.toList());
     }
 
-
+    public List<Event> getAllEvents () {
+        return this.eventRrepository.findAll();
+    }
 }
