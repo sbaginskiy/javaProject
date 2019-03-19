@@ -1,11 +1,12 @@
-package main.java.software.jevera.service;
+package software.jevera.service;
 
-import main.java.software.jevera.dao.EventRrepository;
-import main.java.software.jevera.dao.UserRepository;
-import main.java.software.jevera.domain.Event;
-import main.java.software.jevera.domain.EventType;
-import main.java.software.jevera.domain.User;
-import main.java.software.jevera.exceptions.BussinesException;
+
+
+import software.jevera.dao.EventRrepository;
+import software.jevera.domain.Event;
+import software.jevera.domain.EventType;
+import software.jevera.domain.User;
+import software.jevera.exceptions.BussinesException;
 
 import java.util.ArrayList;
 import java.util.List;

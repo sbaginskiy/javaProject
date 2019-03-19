@@ -1,7 +1,8 @@
-package main.java.software.jevera.service;
+package software.jevera.service;
 
-import main.java.software.jevera.dao.RoomRepository;
-import main.java.software.jevera.domain.Room;
+
+import software.jevera.dao.RoomRepository;
+import software.jevera.domain.Room;
 
 public class RoomService {
     private final RoomRepository roomRepository;

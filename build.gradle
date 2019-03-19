@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 clean {
@@ -11,24 +12,29 @@ test {
     classes.mustRunAfter 'clean'
 }
 
+application {
+    mainClassName = 'software.jevera.JavaProjectApp'
+}
+
 jar {
     manifest {
         attributes(
-                'Main-Class': 'software.jevera.JavaProjectApp'
+                'Main-Class': mainClassName
         )
     }
 }
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
-    annotationProcessor 'org.projectlombok:lombok:1.18.4'
-    implementation 'org.projectlombok:lombok:1.18.4'
-
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 
     testCompile 'org.mockito:mockito-core:2.23.4'
     testCompile 'junit:junit:4.12'
 }
+

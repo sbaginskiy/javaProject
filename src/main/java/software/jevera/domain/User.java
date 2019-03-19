@@ -1,4 +1,4 @@
-package main.java.software.jevera.domain;
+package software.jevera.domain;
 
 import java.util.Objects;
 

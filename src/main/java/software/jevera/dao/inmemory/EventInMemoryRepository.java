@@ -1,15 +1,14 @@
-package main.java.software.jevera.dao.inmemory;
+package software.jevera.dao.inmemory;
 
-import main.java.software.jevera.dao.EventRrepository;
-import main.java.software.jevera.domain.Event;
 
-import java.time.Instant;
+import software.jevera.dao.EventRrepository;
+import software.jevera.domain.Event;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.stream.Collectors;
 
 
 public class EventInMemoryRepository implements EventRrepository {

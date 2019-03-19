@@ -1,7 +1,9 @@
-package main.java.software.jevera.dao.inmemory;
+package software.jevera.dao.inmemory;
 
-import main.java.software.jevera.dao.UserRepository;
-import main.java.software.jevera.domain.User;
+
+
+import software.jevera.dao.UserRepository;
+import software.jevera.domain.User;
 
 import java.util.ArrayList;
 import java.util.List;

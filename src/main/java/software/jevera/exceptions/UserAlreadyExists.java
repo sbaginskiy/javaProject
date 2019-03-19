@@ -1,4 +1,4 @@
-package main.java.software.jevera.exceptions;
+package software.jevera.exceptions;
 
 public class UserAlreadyExists extends RuntimeException {
     private String login;

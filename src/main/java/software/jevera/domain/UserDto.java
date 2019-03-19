@@ -1,4 +1,4 @@
-package main.java.software.jevera.domain;
+package software.jevera.domain;
 
 public class UserDto {
 
@@ -29,3 +29,4 @@ public class UserDto {
         this.password = password;
     }
 }
+

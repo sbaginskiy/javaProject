@@ -1,4 +1,4 @@
-package main.java.software.jevera.domain;
+package software.jevera.domain;
 
 public enum  EventType {
        PEREODIC,ONCE

@@ -1,12 +1,12 @@
-package main.java.software.jevera.configuration;
+package software.jevera.configuration;
 
-import main.java.software.jevera.dao.inmemory.EventInMemoryRepository;
-import main.java.software.jevera.dao.inmemory.RoomInMemoryRepository;
-import main.java.software.jevera.dao.inmemory.UserInMemoryRepository;
-import main.java.software.jevera.service.EventService;
-import main.java.software.jevera.service.RoomService;
-import main.java.software.jevera.service.UserService;
 
+import software.jevera.dao.inmemory.EventInMemoryRepository;
+import software.jevera.dao.inmemory.RoomInMemoryRepository;
+import software.jevera.dao.inmemory.UserInMemoryRepository;
+import software.jevera.service.EventService;
+import software.jevera.service.RoomService;
+import software.jevera.service.UserService;
 
 public class ApplicationFactory {
 

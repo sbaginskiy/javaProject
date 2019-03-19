@@ -1,10 +1,12 @@
-package main.java.software.jevera.service;
+package software.jevera.service;
 
-import main.java.software.jevera.dao.UserRepository;
-import main.java.software.jevera.domain.User;
-import main.java.software.jevera.domain.UserDto;
-import main.java.software.jevera.exceptions.UncorrectGrant;
-import main.java.software.jevera.exceptions.UserAlreadyExists;
+
+
+import software.jevera.dao.UserRepository;
+import software.jevera.domain.User;
+import software.jevera.domain.UserDto;
+import software.jevera.exceptions.UncorrectGrant;
+import software.jevera.exceptions.UserAlreadyExists;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;

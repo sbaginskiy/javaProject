@@ -1,6 +1,7 @@
-package main.java.software.jevera.dao;
+package software.jevera.dao;
 
-import main.java.software.jevera.domain.Event;
+
+import software.jevera.domain.Event;
 
 import java.time.Instant;
 import java.util.List;

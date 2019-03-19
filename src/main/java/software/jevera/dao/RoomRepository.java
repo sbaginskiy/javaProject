@@ -1,7 +1,8 @@
-package main.java.software.jevera.dao;
+package software.jevera.dao;
 
-import main.java.software.jevera.domain.Event;
-import main.java.software.jevera.domain.Room;
+
+
+import software.jevera.domain.Room;
 
 import java.util.List;
 
