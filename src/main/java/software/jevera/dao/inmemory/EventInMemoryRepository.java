@@ -2,6 +2,7 @@ package software.jevera.dao.inmemory;
 
 
 import lombok.var;
+import org.springframework.stereotype.Repository;
 import software.jevera.dao.EventRrepository;
 import software.jevera.domain.Event;
 import software.jevera.domain.OnceTimeEvent;
@@ -14,7 +15,7 @@ import java.util.Set;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 
-
+@Repository
 public class EventInMemoryRepository implements EventRrepository {
 
     private Set<Event> events = new HashSet<>();

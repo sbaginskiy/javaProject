@@ -2,6 +2,7 @@ package software.jevera.service;
 
 
 
+import org.springframework.stereotype.Service;
 import software.jevera.dao.UserRepository;
 import software.jevera.domain.User;
 import software.jevera.domain.UserDto;
@@ -13,6 +14,7 @@ import java.security.MessageDigest;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
+@Service
 public class UserService {
     private final UserRepository userRepository;
 

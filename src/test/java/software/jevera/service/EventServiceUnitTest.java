@@ -3,10 +3,7 @@ package software.jevera.service;
 import org.junit.Before;
 import org.junit.Test;
 import software.jevera.dao.EventRrepository;
-import software.jevera.domain.Event;
-import software.jevera.domain.OnceTimeEvent;
-import software.jevera.domain.Room;
-import software.jevera.domain.User;
+import software.jevera.domain.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -30,13 +27,12 @@ public class EventServiceUnitTest {
 
     }
     @Test
-    public void createOnceEventIsValid() {
+    public void createOnceEvent() {
 
         OnceTimeEvent onceEvent = new OnceTimeEvent(LocalTime.now(),LocalTime.now().plusHours(1l)
                 , new Room("LOL"),LocalDate.now());
         User user = new User();
         when(eventRrepository.save(onceEvent)).thenReturn(onceEvent);
-        eventService.createOnceEvent(onceEvent, user);
         Event result = eventService.createOnceEvent(onceEvent, user);
         assertNotNull(result);
         assertEquals(result, onceEvent);
@@ -44,10 +40,19 @@ public class EventServiceUnitTest {
 
     @Test
     public void createPeriodicEvent() {
+        PeriodicTimeEvent periodicEvent = new PeriodicTimeEvent(LocalDate.now()
+                ,LocalDate.now().plusDays(5),"TUESDAY", LocalTime.now(), LocalTime.now().plusHours(2)
+                , new Room("Room name"));
+        User user = new User();
+        when(eventRrepository.save(periodicEvent)).thenReturn(periodicEvent);
+        Event result = eventService.createPeriodicEvent(periodicEvent, user);
+        assertNotNull(result);
+        assertEquals(result, periodicEvent);
     }
 
     @Test
     public void getOnceEventsByDateAndRoom() {
+
     }
 
     @Test

@@ -1,9 +1,11 @@
 package software.jevera.service;
 
 
+import org.springframework.stereotype.Service;
 import software.jevera.dao.RoomRepository;
 import software.jevera.domain.Room;
 
+@Service
 public class RoomService {
     private final RoomRepository roomRepository;
 

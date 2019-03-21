@@ -13,7 +13,7 @@ public class PeriodicTimeEvent extends Event implements PeriodicTimeInterface{
     private LocalDate startTime;     //  поля startTime и endTime только для Event с типом PERIODIC
     private LocalDate endTime;       // Вопрос: есть ли смысл делать класс Event классом для наследывания для двух других
 
-    public PeriodicTimeEvent(LocalTime timeFrom, LocalTime timeTo, Room room, String day, LocalDate startTime, LocalDate endTime) {
+    public PeriodicTimeEvent(LocalDate startTime, LocalDate endTime, String day, LocalTime timeFrom, LocalTime timeTo, Room room) {
         super(timeFrom, timeTo, room);
         this.day = day;
         this.startTime = startTime;

@@ -1,6 +1,7 @@
 package software.jevera.service;
 
 
+import org.springframework.stereotype.Service;
 import software.jevera.dao.EventRrepository;
 import software.jevera.domain.*;
 import software.jevera.exceptions.BussinesException;
@@ -18,27 +19,27 @@ import java.util.stream.Collectors;
 *  И какие еще методы мне стоит реализовать (Помню ты что-то говорил про удаления определенного
 *    дня из периодического иветна) ?
 */
-
+@Service
 public class EventService {
 
     private final EventRrepository eventRrepository;
 
     static final String TIME_ALREADY_TAKEN = "Selected time already taken";
 
-    public EventService(EventRrepository eventRrepository) {
+    public EventService (EventRrepository eventRrepository) {
         this.eventRrepository = eventRrepository;
     }
 
-    public Event createOnceEvent(OnceTimeEvent onceTimeEvent, User user){
+    public Event createOnceEvent (OnceTimeEvent onceTimeEvent, User user) {
         assertTimeForOnce(onceTimeEvent, TIME_ALREADY_TAKEN);
         onceTimeEvent.setEventOwner(user);
         return eventRrepository.save(onceTimeEvent);
     }
 
-    public Event createPeriodicEvent(PeriodicTimeEvent onceTimeEvent, User user){
-        assertTimeForPeriodic(onceTimeEvent, TIME_ALREADY_TAKEN);
-        onceTimeEvent.setEventOwner(user);
-        return eventRrepository.save(onceTimeEvent);
+    public Event createPeriodicEvent (PeriodicTimeEvent periodicTimeEvent, User user) {
+        assertTimeForPeriodic(periodicTimeEvent, TIME_ALREADY_TAKEN);
+        periodicTimeEvent.setEventOwner(user);
+        return eventRrepository.save(periodicTimeEvent);
     }
 
     private void assertTimeForOnce(OnceTimeEvent event, String message) {
