@@ -11,9 +11,6 @@ import static software.jevera.configuration.ApplicationFactory.userService;
 public class JavaProjectApp {
 
     public static void main(String[] args) {
-        User user = userService.registerUser(new UserDto("userlogin1", "password"));
-        eventService.createEvent(new Event(), user);
-        System.out.println(eventService.getAllEvents());;
     }
 
 }

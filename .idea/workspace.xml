@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/Event.java" line="10" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/Event.java" line="17" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12880ec6-32e4-4518-88e7-d70e3bc3726c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/software/jevera/domain/OnceTimeEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/software/jevera/domain/OnceTimeInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/software/jevera/domain/PeriodicTimeEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/software/jevera/domain/PeriodicTimeInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/software/jevera/service/EventServiceUnitTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/jevera/JavaProjectApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/jevera/JavaProjectApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/jevera/dao/EventRrepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/jevera/dao/EventRrepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/jevera/dao/inmemory/EventInMemoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/jevera/dao/inmemory/EventInMemoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/jevera/domain/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/jevera/domain/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/jevera/domain/EventType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/jevera/domain/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/jevera/domain/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/jevera/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/jevera/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/jevera/domain/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/jevera/domain/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/software/jevera/service/EventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/software/jevera/service/EventService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -83,149 +96,194 @@
     <session id="-1820251707">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.29" value="2" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="bat" value="1" />
+          <entry key="class" value="8" />
           <entry key="gitignore" value="1" />
           <entry key="gradle" value="1" />
           <entry key="gradlew" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="30" />
+          <entry key="java" value="63" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="8" />
           <entry key="Groovy" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="30" />
+          <entry key="JAVA" value="63" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="class" value="35" />
+          <entry key="dummy" value="1" />
           <entry key="gradle" value="120" />
-          <entry key="java" value="71" />
+          <entry key="java" value="2508" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="CLASS" value="35" />
           <entry key="Groovy" value="120" />
-          <entry key="JAVA" value="71" />
+          <entry key="JAVA" value="2508" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/EventType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/Event.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gradlew.bat">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradlew">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/JavaProjectApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="13" column="68" selection-start-line="13" selection-start-column="68" selection-end-line="13" selection-end-column="68" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/service/EventService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/service/RoomService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.50635326">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/test/java/software/jevera/service/EventServiceUnitTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="441">
+                  <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/JavaProjectApp.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="304">
+                  <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/dao/EventRrepository.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="209">
+                  <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/dao/inmemory/EventInMemoryRepository.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="289">
+                  <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/service/EventService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="189">
+                  <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.23.4/a35b6f8ffcfa786771eac7d7d903429e790fdf3f/mockito-core-2.23.4.jar!/org/mockito/internal/creation/bytebuddy/MockMethodInterceptor.class">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="234">
+                  <caret line="46" selection-start-line="46" selection-end-line="46" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.23.4/a35b6f8ffcfa786771eac7d7d903429e790fdf3f/mockito-core-2.23.4.jar!/org/mockito/internal/invocation/DefaultInvocationFactory.class">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="475">
+                  <caret line="40" selection-start-line="40" selection-end-line="40" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.23.4/a35b6f8ffcfa786771eac7d7d903429e790fdf3f/mockito-core-2.23.4.jar!/org/mockito/internal/invocation/mockref/MockWeakReference.class">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="190">
+                  <caret line="14" selection-start-line="14" selection-end-line="14" />
+                  <folding>
+                    <element signature="e#417#418#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.23.4/a35b6f8ffcfa786771eac7d7d903429e790fdf3f/mockito-core-2.23.4.jar!/org/mockito/internal/debugging/LocationImpl.class">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="158">
+                  <caret line="19" selection-start-line="19" selection-end-line="19" />
+                  <folding>
+                    <element signature="e#637#638#0" expanded="true" />
+                    <element signature="e#744#745#0" expanded="true" />
+                    <element signature="e#799#800#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/service/EventService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="209">
+                  <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="Enum" />
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -449,7 +507,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4658924083000" />
+        <entry key="$PROJECT_DIR$" value="4659007509000" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/build.gradle" value="944000277" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2630766971" />
@@ -579,27 +637,33 @@
         <option value="$PROJECT_DIR$/src/main/java/software/jevera/service/event/EventType.java" />
         <option value="$PROJECT_DIR$/src/main/java/software/jevera/domain/RoomKey.java" />
         <option value="$PROJECT_DIR$/src/main/java/software/jevera/DemoAuctionApp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/software/jevera/domain/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/software/jevera/domain/UserDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/software/jevera/domain/EventType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/software/jevera/domain/Room.java" />
         <option value="$PROJECT_DIR$/src/main/java/software/jevera/exceptions/BussinesException.java" />
         <option value="$PROJECT_DIR$/src/main/java/software/jevera/exceptions/UncorrectGrant.java" />
         <option value="$PROJECT_DIR$/src/main/java/software/jevera/exceptions/UserAlreadyExists.java" />
-        <option value="$PROJECT_DIR$/src/main/java/software/jevera/service/EventService.java" />
         <option value="$PROJECT_DIR$/src/main/java/software/jevera/dao/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/software/jevera/dao/RoomRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/software/jevera/dao/EventRrepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/software/jevera/dao/inmemory/RoomInMemoryRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/software/jevera/dao/inmemory/EventInMemoryRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/software/jevera/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/software/jevera/service/RoomService.java" />
         <option value="$PROJECT_DIR$/src/main/java/software/jevera/configuration/ApplicationFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/software/jevera/JavaProjectApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/software/jevera/dao/inmemory/UserInMemoryRepository.java" />
-        <option value="$PROJECT_DIR$/src/test/java/software/jevera/service/EventServiceTest.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/software/jevera/domain/EventType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/software/jevera/domain/Room.java" />
+        <option value="$PROJECT_DIR$/src/main/java/software/jevera/domain/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/software/jevera/domain/UserDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/software/jevera/domain/OnceTmeEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/software/jevera/dao/EventRrepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/software/jevera/dao/inmemory/EventInMemoryRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/software/jevera/domain/PeriodicTimeInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/software/jevera/domain/Event.java" />
+        <option value="$PROJECT_DIR$/src/main/java/software/jevera/domain/PeriodicTimeEvent.java" />
+        <option value="$PROJECT_DIR$/src/test/java/software/jevera/service/EventServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/software/jevera/domain/OnceTimeEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/software/jevera/domain/OnceTimeInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/software/jevera/JavaProjectApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/software/jevera/service/EventService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/software/jevera/service/EventServiceUnitTest.java" />
       </list>
     </option>
   </component>
@@ -614,7 +678,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -655,6 +719,25 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="jevera" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javaProject" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jevera" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="inmemory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javaProject" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jevera" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -679,26 +762,155 @@
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javaProject" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lang" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.mockito:mockito-core:2.23.4" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.mockito:mockito-core:2.23.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="mockito-core-2.23.4.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.mockito:mockito-core:2.23.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="mockito-core-2.23.4.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="mockito" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.mockito:mockito-core:2.23.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="mockito-core-2.23.4.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="mockito" type="462c0819:PsiDirectoryNode" />
+              <item name="internal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.mockito:mockito-core:2.23.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="mockito-core-2.23.4.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="mockito" type="462c0819:PsiDirectoryNode" />
+              <item name="internal" type="462c0819:PsiDirectoryNode" />
+              <item name="creation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.mockito:mockito-core:2.23.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="mockito-core-2.23.4.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="mockito" type="462c0819:PsiDirectoryNode" />
+              <item name="internal" type="462c0819:PsiDirectoryNode" />
+              <item name="creation" type="462c0819:PsiDirectoryNode" />
+              <item name="bytebuddy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.mockito:mockito-core:2.23.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="mockito-core-2.23.4.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="mockito" type="462c0819:PsiDirectoryNode" />
+              <item name="internal" type="462c0819:PsiDirectoryNode" />
+              <item name="debugging" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.mockito:mockito-core:2.23.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="mockito-core-2.23.4.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="mockito" type="462c0819:PsiDirectoryNode" />
+              <item name="internal" type="462c0819:PsiDirectoryNode" />
+              <item name="invocation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.mockito:mockito-core:2.23.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="mockito-core-2.23.4.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="mockito" type="462c0819:PsiDirectoryNode" />
+              <item name="internal" type="462c0819:PsiDirectoryNode" />
+              <item name="invocation" type="462c0819:PsiDirectoryNode" />
+              <item name="mockref" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.projectlombok:lombok:1.18.6" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.projectlombok:lombok:1.18.6" type="70bed36:NamedLibraryElementNode" />
+              <item name="lombok-1.18.6.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.projectlombok:lombok:1.18.6" type="70bed36:NamedLibraryElementNode" />
+              <item name="lombok-1.18.6.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="lombok" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553114809948" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553169275314" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$USER_HOME$/project/demo-auction" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -708,13 +920,16 @@
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/software/jevera" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java/software/jevera/exceptions" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="software.jevera.domain" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -729,7 +944,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.EventServiceUnitTest.createOnceEvent">
     <configuration name="javaProject [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -748,8 +963,65 @@
       </ExternalSystemSettings>
       <method v="2" />
     </configuration>
+    <configuration name="EventServiceUnitTest.createEvents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javaProject_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="software.jevera.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="software.jevera.service" />
+      <option name="MAIN_CLASS_NAME" value="software.jevera.service.EventServiceUnitTest" />
+      <option name="METHOD_NAME" value="createEvents" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EventServiceUnitTest.createOnceEvent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javaProject_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="software.jevera.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="software.jevera.service" />
+      <option name="MAIN_CLASS_NAME" value="software.jevera.service.EventServiceUnitTest" />
+      <option name="METHOD_NAME" value="createOnceEvent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EventServiceUnitTest.getAllEvents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javaProject_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="software.jevera.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="software.jevera.service" />
+      <option name="MAIN_CLASS_NAME" value="software.jevera.service.EventServiceUnitTest" />
+      <option name="METHOD_NAME" value="getAllEvents" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.javaProject [dependencies]" />
+      <item itemvalue="JUnit.EventServiceUnitTest.getAllEvents" />
+      <item itemvalue="JUnit.EventServiceUnitTest.createEvents" />
+      <item itemvalue="JUnit.EventServiceUnitTest.createOnceEvent" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EventServiceUnitTest.createOnceEvent" />
+        <item itemvalue="JUnit.EventServiceUnitTest.createEvents" />
+        <item itemvalue="JUnit.EventServiceUnitTest.getAllEvents" />
         <item itemvalue="Gradle.javaProject [dependencies]" />
       </list>
     </recent_temporary>
@@ -782,6 +1054,38 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="EventServiceTest_getAllEvents - 2019.03.21 at 00h 39m 07s.xml">
+      <configuration name="EventServiceTest.getAllEvents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EventServiceTest_createEvents - 2019.03.21 at 01h 00m 47s.xml">
+      <configuration name="EventServiceTest.createEvents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EventServiceTest_createEvents - 2019.03.21 at 01h 02m 23s.xml">
+      <configuration name="EventServiceTest.createEvents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EventServiceUnitTest_createOnceEvent - 2019.03.21 at 12h 27m 53s.xml">
+      <configuration name="EventServiceUnitTest.createOnceEvent" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EventServiceUnitTest_createOnceEvent - 2019.03.21 at 12h 29m 00s.xml">
+      <configuration name="EventServiceUnitTest.createOnceEvent" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EventServiceUnitTest_createOnceEvent - 2019.03.21 at 12h 31m 59s.xml">
+      <configuration name="EventServiceUnitTest.createOnceEvent" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EventServiceUnitTest_createOnceEvent - 2019.03.21 at 12h 38m 31s.xml">
+      <configuration name="EventServiceUnitTest.createOnceEvent" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EventServiceUnitTest_createOnceEvent - 2019.03.21 at 12h 38m 41s.xml">
+      <configuration name="EventServiceUnitTest.createOnceEvent" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EventServiceUnitTest_createOnceEvent - 2019.03.21 at 12h 40m 32s.xml">
+      <configuration name="EventServiceUnitTest.createOnceEvent" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EventServiceUnitTest_createOnceEvent - 2019.03.21 at 12h 41m 56s.xml">
+      <configuration name="EventServiceUnitTest.createOnceEvent" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -793,8 +1097,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15528281" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16008538" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -803,15 +1108,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32901832" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3297414" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4994664" visible="true" weight="0.3297414" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4994664" weight="0.39978448" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297414" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3286638" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3297414" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053364" side_tool="true" weight="0.39978448" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Build" order="10" visible="true" weight="0.3577586" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.3577586" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3297414" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497332" />
@@ -832,9 +1138,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="zxc" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/Cat.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/Dog.java" />
-    <entry file="file://$PROJECT_DIR$/src/dao/a.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/Calendar.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/dao/inmemory/CalendarInmemoryRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/service/event/Periodic.java" />
@@ -895,20 +1198,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/java/software/jevera/domain/UserDto.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/UserDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/exceptions/BussinesException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -937,54 +1226,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/dao/EventRrepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/dao/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/dao/inmemory/UserInMemoryRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/dao/inmemory/RoomInMemoryRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/dao/inmemory/EventInMemoryRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="13" column="58" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/configuration/ApplicationFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -995,6 +1236,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew.bat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/OnceTimeEvent.java" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.6/616105b0831250a2e443447508e6a8b26bc466fb/lombok-1.18.6.jar!/lombok/EqualsAndHashCode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/dao/inmemory/UserInMemoryRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/UserDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/dao/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/String.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="311" column="18" lean-forward="true" selection-start-line="311" selection-start-column="18" selection-end-line="311" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/dao/inmemory/RoomInMemoryRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/EventType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -1002,78 +1322,156 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/JavaProjectApp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="13" column="68" selection-start-line="13" selection-start-column="68" selection-end-line="13" selection-end-column="68" />
+        <state relative-caret-position="133">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/PeriodicTimeInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#1064#1065#0" expanded="true" />
+            <element signature="e#1638#1639#0" expanded="true" />
+            <element signature="e#1684#1685#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/PeriodicTimeEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="513">
+          <caret line="27" column="67" lean-forward="true" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/service/RoomService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="114">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/software/jevera/service/EventServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/OnceTimeEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="342">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/OnceTimeInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/JavaProjectApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/dao/EventRrepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/dao/inmemory/EventInMemoryRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.23.4/a35b6f8ffcfa786771eac7d7d903429e790fdf3f/mockito-core-2.23.4.jar!/org/mockito/internal/debugging/LocationImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.23.4/a35b6f8ffcfa786771eac7d7d903429e790fdf3f/mockito-core-2.23.4.jar!/org/mockito/internal/creation/bytebuddy/MockMethodInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.23.4/a35b6f8ffcfa786771eac7d7d903429e790fdf3f/mockito-core-2.23.4.jar!/org/mockito/internal/invocation/DefaultInvocationFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.23.4/a35b6f8ffcfa786771eac7d7d903429e790fdf3f/mockito-core-2.23.4.jar!/org/mockito/internal/invocation/mockref/MockWeakReference.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#417#418#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/service/EventService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        <state relative-caret-position="189">
+          <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/test/java/software/jevera/service/EventServiceUnitTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/software/jevera/domain/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="441">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew.bat">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
