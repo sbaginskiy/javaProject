@@ -7,28 +7,24 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Getter @Setter
-public class PeriodicTimeEvent extends Event implements PeriodicTimeInterface{
+public class PeriodicTimeEvent extends Event {
 
-    private String day;  // -            // поле day использую только для Event с типом ONCE
-    private LocalDate startTime;     //  поля startTime и endTime только для Event с типом PERIODIC
-    private LocalDate endTime;       // Вопрос: есть ли смысл делать класс Event классом для наследывания для двух других
+    private String day;
+    private LocalDate startDate;
+    private LocalDate endDate;
 
-    public PeriodicTimeEvent(LocalDate startTime, LocalDate endTime, String day, LocalTime timeFrom, LocalTime timeTo, Room room) {
+    public PeriodicTimeEvent(LocalDate startDate, LocalDate endDate, String day, LocalTime timeFrom, LocalTime timeTo, Room room) {
         super(timeFrom, timeTo, room);
         this.day = day;
-        this.startTime = startTime;
-        this.endTime = endTime;
+        this.startDate = startDate;
+        this.endDate = endDate;
     }
 
     @Override
-    public boolean checkEventInBounds(PeriodicTimeEvent event) {
-
-        if (this.getStartTime().isAfter(event.getStartTime())
-                && this.getStartTime().isBefore(event.getEndTime())
-                || (this.getEndTime().isAfter(event.getStartTime())
-                && this.getEndTime().isBefore(event.getEndTime()))){
-            return true;
-        }else {return false;}
+    public boolean checkDate(LocalDate startTime, LocalDate endTime) {
+        if (this.getStartDate().isBefore(endTime) || this.getEndDate().isAfter(startTime)){
+            return false;
+        }else {return true;}
     }
 
 }

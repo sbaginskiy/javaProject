@@ -7,15 +7,24 @@ import software.jevera.domain.OnceTimeEvent;
 import software.jevera.domain.User;
 import software.jevera.service.EventService;
 
+import java.time.LocalTime;
+
 @SpringBootApplication
 public class JavaProjectApp {
 
     public static void main(String[] args) {
-        ApplicationContext context = SpringApplication.run(JavaProjectApp.class, args);
 
-        EventService eventService = context.getBean(EventService.class);
-        eventService.createOnceEvent(new OnceTimeEvent(), new User());
-        System.out.println(eventService.getAllEvents());
+
+        LocalTime z = LocalTime.now();
+        LocalTime s = LocalTime.now().minusHours(6);
+
+        System.out.println(z.isAfter(s));
+
+//        ApplicationContext context = SpringApplication.run(JavaProjectApp.class, args);
+//
+//        EventService eventService = context.getBean(EventService.class);
+//        eventService.createOnceEvent(new OnceTimeEvent(), new User());
+//        System.out.println(eventService.getAllEvents());
     }
 
 }

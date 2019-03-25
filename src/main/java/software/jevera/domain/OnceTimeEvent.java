@@ -1,5 +1,6 @@
 package software.jevera.domain;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,9 +10,9 @@ import java.time.LocalTime;
 
 @Setter @Getter
 @NoArgsConstructor
-public class OnceTimeEvent extends Event implements OnceTimeInterface {
+public class OnceTimeEvent extends Event {
 
-    private LocalDate date;  // +
+    private LocalDate date;
 
     public OnceTimeEvent(LocalTime timeFrom, LocalTime timeTo, Room room, LocalDate date) {
         super(timeFrom, timeTo, room);
@@ -19,6 +20,10 @@ public class OnceTimeEvent extends Event implements OnceTimeInterface {
     }
 
 
+    @Override
+    public boolean checkDate(LocalDate startTime, LocalDate endTime) {
+        return false;
+    }
 }
 
 

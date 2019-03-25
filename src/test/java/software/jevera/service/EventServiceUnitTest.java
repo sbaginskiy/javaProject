@@ -7,6 +7,8 @@ import software.jevera.domain.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -52,34 +54,97 @@ public class EventServiceUnitTest {
 
     @Test
     public void getOnceEventsByDateAndRoom() {
+        Room room = new Room("LOL");
+        Room checkRoom = new Room("LOL1");
+        LocalTime timeTo = LocalTime.now();
+        timeTo.plusHours(5);
 
+        OnceTimeEvent event = new OnceTimeEvent(LocalTime.now(),timeTo,room,LocalDate.now());
+        event.setId(1L);
+        OnceTimeEvent event2 = new OnceTimeEvent(LocalTime.now(),timeTo,room,LocalDate.now());
+
+        OnceTimeEvent testEvent = new OnceTimeEvent(LocalTime.now(),timeTo,checkRoom,LocalDate.now());
+        OnceTimeEvent check = new OnceTimeEvent(LocalTime.now(),timeTo,checkRoom,LocalDate.now());
+        check.setId(1L);
+
+        List<Event> testList = new ArrayList<>();
+        testList.add(event);
+        testList.add(testEvent);
+        testList.add(event2);
+
+        when(eventRrepository.findAllOnce()).thenReturn(testList);
+
+        OnceTimeEvent result = (OnceTimeEvent) eventService.getOnceEventsByDateAndRoom(check).get(0);
+        assertEquals(testEvent.getRoom(),result.getRoom());
+        assertEquals(testEvent.getDate(),result.getDate());
     }
 
     @Test
     public void getPeriodicEventsByDateAndRoom() {
+        Room room = new Room("LOL");
+        Room checkRoom = new Room("LOL1");
+        LocalTime timeTo = LocalTime.now();
+        timeTo.plusHours(5);
+
+        PeriodicTimeEvent event = new PeriodicTimeEvent(null,null,"SUNDAY"
+                ,null,null,room);
+        PeriodicTimeEvent event1 = new PeriodicTimeEvent(null,null,"SUNDAY"
+                ,null,null,room);
+        PeriodicTimeEvent test = new PeriodicTimeEvent(null,null,"SUNDAY"
+                ,null,null,checkRoom);
+
+        OnceTimeEvent check = new OnceTimeEvent(LocalTime.now(),timeTo,checkRoom,LocalDate.now());
+        check.setId(1L);
+
+        List<Event> testList = new ArrayList<>();
+        testList.add(event);
+        testList.add(test);
+        testList.add(event1);
+
+        when(eventRrepository.findAllPeriodic()).thenReturn(testList);
+
+        PeriodicTimeEvent result = (PeriodicTimeEvent) eventService.getPeriodicEventsByDateAndRoom(check).get(0);
+        assertEquals(test.getRoom(),result.getRoom());
+        assertEquals(test.getDay(),result.getDay());
     }
 
     @Test
     public void isTimeNotAvailable() {
+         LocalTime time = LocalTime.now();
+         LocalTime time1 = LocalTime.now();
+         LocalTime timeTo = time.plusHours(2);
+         LocalTime timeTo1 = time.plusHours(4);
+         LocalTime timeFrom = timeTo.minusHours(2);
+
+        OnceTimeEvent event = new OnceTimeEvent(timeFrom,timeTo,new Room("z"),LocalDate.now());
+        event.setId(1L);
+        OnceTimeEvent check = new OnceTimeEvent(timeTo,time,new Room("z"),LocalDate.now());
+        check.setId(1L);
+
+        List<Event> testList = new ArrayList<>();
+        testList.add(event);
+
+        boolean result = eventService.isTimeNotAvailable(testList,check);
+        assertEquals(true,result);
     }
 
-    @Test
-    public void assertTimeForPeriodic() {
-    }
 
     @Test
     public void getAllPeriodicEventsInBounds() {
+        Room room = new Room("LOL");
+        Room checkRoom = new Room("LOL1");
+        LocalTime timeTo = LocalTime.now();
+        timeTo.plusHours(5);
+
+        PeriodicTimeEvent event = new PeriodicTimeEvent(null,null,"SUNDAY"
+                ,null,null,room);
+        PeriodicTimeEvent event1 = new PeriodicTimeEvent(null,null,"SUNDAY"
+                ,null,null,room);
+        PeriodicTimeEvent test = new PeriodicTimeEvent(null,null,"SUNDAY"
+                ,null,null,checkRoom);
     }
 
     @Test
     public void getAllOnceEventsInBounds() {
-    }
-
-    @Test
-    public void getAllEvents() {
-    }
-
-    @Test
-    public void getEventsById1() {
     }
 }
