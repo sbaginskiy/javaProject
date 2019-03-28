@@ -32,14 +32,14 @@ public class EventInMemoryRepository implements EventRrepository {
     }
 
     @Override
-    public List<Event> findAllPeriodic() {
-        return events.stream().filter(it -> it instanceof PeriodicTimeEvent)
+    public List<PeriodicTimeEvent> findAllPeriodic() {
+        return events.stream().filter(it -> it instanceof PeriodicTimeEvent).map(PeriodicTimeEvent.class::cast)
                 .collect(Collectors.toList());
     }
 
     @Override
-    public List<Event> findAllOnce() {
-        return  events.stream().filter(it -> it instanceof OnceTimeEvent)
+    public List<OnceTimeEvent> findAllOnce() {
+        return  events.stream().filter(it -> it instanceof OnceTimeEvent).map(OnceTimeEvent.class::cast)
                 .collect(Collectors.toList());
     }
 

@@ -20,4 +20,9 @@ public class RoomInMemoryRepository implements RoomRepository {
         rooms.add(room);
         return room;
     }
+
+    @Override
+    public Boolean checkRoom(Room room) {
+        return rooms.contains(room);
+    }
 }

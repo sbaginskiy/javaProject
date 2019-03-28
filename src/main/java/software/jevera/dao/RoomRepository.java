@@ -10,5 +10,6 @@ public interface RoomRepository {
 
     Room save(Room room);
 
+    Boolean checkRoom(Room room);
 
 }

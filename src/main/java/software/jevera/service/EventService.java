@@ -23,19 +23,19 @@ public class EventService {
     public EventService (EventRrepository eventRrepository) {
         this.eventRrepository = eventRrepository;
     }
-
+//+
     public Event createOnceEvent (OnceTimeEvent onceTimeEvent, User user) {
         assertTimeForOnce(onceTimeEvent, TIME_ALREADY_TAKEN);
         onceTimeEvent.setEventOwner(user);
         return eventRrepository.save(onceTimeEvent);
     }
-
+//-
     public Event createPeriodicEvent (PeriodicTimeEvent periodicTimeEvent, User user) {
         assertTimeForPeriodic(periodicTimeEvent, TIME_ALREADY_TAKEN);
         periodicTimeEvent.setEventOwner(user);
         return eventRrepository.save(periodicTimeEvent);
     }
-
+//-
     private void assertTimeForOnce(OnceTimeEvent event, String message) {
         List<Event> checkList = new ArrayList<>();                                    // находит все ивенты с типом Once в тойже комнате и в тотже день что и новый ивент
         checkList.addAll(getOnceEventsByDateAndRoom(event));                          // находит все ивенты с типом Periodic в тойже комнате и в тотже день что и новый ивент
@@ -45,7 +45,7 @@ public class EventService {
        }
     }
 
-
+//+
     public List<Event> getOnceEventsByDateAndRoom (OnceTimeEvent event) {
         return getAllOnceEvents().stream()
                 .map(it ->(OnceTimeEvent)it)
@@ -55,7 +55,7 @@ public class EventService {
     }
 
     //--пока пусть будет так, нужно переделать
-
+//+
     public List<Event> getPeriodicEventsByDateAndRoom (OnceTimeEvent event) {
         return getAllPeriodicEvents().stream()
                 .map(it -> (PeriodicTimeEvent) it)
@@ -64,7 +64,7 @@ public class EventService {
                 .collect(Collectors.toList());
     }
     //----------------------------------------непонятно, слишком много
-
+//+
     public boolean isTimeNotAvailable (List<Event> eventCheckList, Event event) {
         return eventCheckList.stream().anyMatch(it -> (it.getTimeFrom().isAfter(event.getTimeFrom())
 
@@ -76,7 +76,7 @@ public class EventService {
                 (it.getTimeFrom().isBefore(event.getTimeFrom()) && it.getTimeTo().isAfter(event.getTimeTo())));
 
     }
-    //-----
+//-    //-----
     public void assertTimeForPeriodic(PeriodicTimeEvent event, String message) {
         List<Event> checkList = new ArrayList<>();
         // находит все ивенты с типом Periodic которые входят в период резервирования и проводятся в тойже комнате
@@ -89,7 +89,7 @@ public class EventService {
         }
 
     }
-
+//+
     public List<Event> getAllPeriodicEventsInBounds (PeriodicTimeEvent event) {
         return eventRrepository.findAllPeriodic().stream()
                 .map(it -> (PeriodicTimeEvent)it)
@@ -98,9 +98,9 @@ public class EventService {
                 .filter(it -> it.getDay().equals(event.getDay()))
                 .collect(Collectors.toList());
     }
-
+//+
     public List<Event> getAllOnceEventsInBounds (PeriodicTimeEvent event) {
-        return eventRrepository.findAllOnce().stream()
+        return getAllOnceEvents().stream()
                 .map(it -> (OnceTimeEvent)it)
                 .filter(it -> it.getRoom() == event.getRoom())
                 .filter(it -> it.getDate().isAfter(event.getStartDate()) && it.getDate().isBefore(event.getEndDate()))
@@ -110,9 +110,9 @@ public class EventService {
 
     public List<Event> getAllEvents () { return this.eventRrepository.findAll(); }
 
-    public List<Event> getAllOnceEvents () { return this.eventRrepository.findAllOnce(); }
+    public List<OnceTimeEvent> getAllOnceEvents () { return this.eventRrepository.findAllOnce(); }
 
-    public List<Event> getAllPeriodicEvents () { return this.eventRrepository.findAllPeriodic(); }
+    public List<PeriodicTimeEvent> getAllPeriodicEvents () { return this.eventRrepository.findAllPeriodic(); }
 
     public Event getEventsById (Long id) { return this.eventRrepository.findById(id); }
 

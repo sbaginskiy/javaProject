@@ -2,6 +2,7 @@ package software.jevera.dao;
 
 
 import software.jevera.domain.Event;
+import software.jevera.domain.OnceTimeEvent;
 import software.jevera.domain.PeriodicTimeEvent;
 
 import java.time.Instant;
@@ -11,9 +12,9 @@ public interface EventRrepository {
 
     Event save(Event event);
 
-    List<Event> findAllPeriodic();
+    List<PeriodicTimeEvent> findAllPeriodic();
 
-    List<Event> findAllOnce();
+    List<OnceTimeEvent> findAllOnce();
 
     List<Event> findAll();
 
