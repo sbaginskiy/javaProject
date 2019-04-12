@@ -30,4 +30,8 @@ public class RoomService {
     private boolean isRoomPresent(Room room) {
         return !roomRepository.checkRoom(room);
     }
+
+    private Room getRoomByType(String type) {
+        return roomRepository.getRoomByType(type);
+    }
 }

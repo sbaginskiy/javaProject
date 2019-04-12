@@ -12,4 +12,6 @@ public interface RoomRepository {
 
     Boolean checkRoom(Room room);
 
+    Room getRoomByType(String type);
+
 }

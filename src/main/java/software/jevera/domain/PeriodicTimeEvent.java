@@ -22,11 +22,35 @@ public class PeriodicTimeEvent extends Event {
         this.endDate = endDate;
     }
 
+    public PeriodicTimeEvent room(Room room){
+        this.setRoom(room);
+        return this;
+    }
+    public PeriodicTimeEvent day(String day){
+        this.setDay(day);
+        return this;
+    }
+    public PeriodicTimeEvent timeFrom(LocalTime timeFrom){
+        this.setTimeFrom(timeFrom);
+        return this;
+    }
+    public PeriodicTimeEvent timeTo(LocalTime timeTo){
+        this.setTimeTo(timeTo);
+        return this;
+    }
+
     @Override
     public boolean checkDate(LocalDate startTime, LocalDate endTime) {
-        if (this.getStartDate().isBefore(endTime) || this.getEndDate().isAfter(startTime)){
-            return false;
-        }else {return true;}
+//        if (this.getStartDate().isBefore(endTime) || this.getEndDate().isAfter(startTime)){
+//            return false;
+//        }else {return true;}
+
+        if (this.getStartDate().isAfter(startTime)
+                && this.getStartDate().isBefore(endTime)
+                || (this.getEndDate().isAfter(startTime)
+                && this.getEndDate().isBefore(endTime))){
+            return true;
+        }else {return false;}
     }
 
 }

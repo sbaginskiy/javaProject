@@ -9,8 +9,11 @@ import java.util.List;
 @Getter @Setter
 @ToString @AllArgsConstructor
 @EqualsAndHashCode(of = "type")
+@NoArgsConstructor
 public class Room {
 
  String type;
+
+
 
 }

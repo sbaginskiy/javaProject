@@ -5,6 +5,7 @@ package software.jevera.dao.inmemory;
 import org.springframework.stereotype.Repository;
 import software.jevera.dao.UserRepository;
 import software.jevera.domain.User;
+import software.jevera.exceptions.BussinesException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +17,7 @@ public class UserInMemoryRepository implements UserRepository {
 
     @Override
     public boolean isUserWithLoginExists(String login) {
-        return users.stream().allMatch(user -> user.getLogin().equals(login));
+        return users.stream().anyMatch(user -> user.getLogin().equals(login));
     }
 
     @Override

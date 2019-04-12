@@ -1,5 +1,6 @@
 package software.jevera.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 
@@ -9,6 +10,7 @@ import lombok.*;
 @ToString
 public class User {
     private String login;
+    @JsonIgnore
     private String passwordHash;
 
     public User() {

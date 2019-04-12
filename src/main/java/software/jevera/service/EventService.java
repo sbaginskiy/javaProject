@@ -58,7 +58,6 @@ public class EventService {
 //+
     public List<Event> getPeriodicEventsByDateAndRoom (OnceTimeEvent event) {
         return getAllPeriodicEvents().stream()
-                .map(it -> (PeriodicTimeEvent) it)
                 .filter(it -> it.getDay().equals(event.getDate().getDayOfWeek().toString()))
                 .filter(it -> it.getRoom().equals(event.getRoom()))
                 .collect(Collectors.toList());
@@ -92,8 +91,7 @@ public class EventService {
 //+
     public List<Event> getAllPeriodicEventsInBounds (PeriodicTimeEvent event) {
         return eventRrepository.findAllPeriodic().stream()
-                .map(it -> (PeriodicTimeEvent)it)
-                .filter(it -> it.getRoom() == event.getRoom())
+                .filter(it -> it.getRoom().equals(event.getRoom()))
                 .filter(it -> it.checkDate(event.getStartDate(),event.getEndDate()))   // here
                 .filter(it -> it.getDay().equals(event.getDay()))
                 .collect(Collectors.toList());

@@ -30,15 +30,31 @@ jar {
 repositories {
     mavenCentral()
 }
-
 dependencies {
+
     annotationProcessor 'org.projectlombok:lombok:1.18.6'
+
+    compileOnly 'org.mapstruct:mapstruct-processor:1.2.0.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.2.0.Final'
+
     implementation 'org.projectlombok:lombok:1.18.6'
 
     implementation 'org.springframework.boot:spring-boot-starter'
+
+
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-freemarker'
+
+
+    implementation 'io.springfox:springfox-swagger-ui:2.9.2'
+    implementation 'io.springfox:springfox-swagger2:2.9.2'
+
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     testCompile 'org.mockito:mockito-core:2.23.4'
     testCompile 'junit:junit:4.12'
 }
+
 
