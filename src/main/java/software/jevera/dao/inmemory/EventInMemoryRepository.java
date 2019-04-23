@@ -1,7 +1,6 @@
 package software.jevera.dao.inmemory;
 
 
-import lombok.var;
 import org.springframework.stereotype.Repository;
 import software.jevera.dao.EventRrepository;
 import software.jevera.domain.Event;

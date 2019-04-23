@@ -7,6 +7,7 @@ import software.jevera.domain.OnceTimeEvent;
 import software.jevera.domain.User;
 import software.jevera.service.EventService;
 
+import java.beans.EventSetDescriptor;
 import java.time.LocalTime;
 
 @SpringBootApplication
@@ -19,5 +20,4 @@ public class JavaProjectApp {
         eventService.createOnceEvent(new OnceTimeEvent(), new User());
         System.out.println(eventService.getAllEvents());
     }
-
 }

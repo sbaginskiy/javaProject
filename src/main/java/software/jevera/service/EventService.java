@@ -13,12 +13,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
+/*
+что нужно сервису ??
+
+1) Создавать ивент
+2) Отменить ивент  // только создатель ивента \\ // желательно отправлять участникам имейлы об отмене \\
+3) Посмотреть расписание за неделю
+4) Для периодических - посмотреть сколько еще осталось митингов
+5) Посмотреть расписание на любойдень день/на сегодня для всех комнат/определенной
+6) Отменить митинг(один определенный)/отменить отрезок в несколько митингов из переодического ивента
+
+ */
 @Service
 public class EventService {
 
     private final EventRrepository eventRrepository;
 
-    static final String TIME_ALREADY_TAKEN = "Selected time already taken";
+    static private final String TIME_ALREADY_TAKEN = "Selected time already taken";
 
     public EventService (EventRrepository eventRrepository) {
         this.eventRrepository = eventRrepository;

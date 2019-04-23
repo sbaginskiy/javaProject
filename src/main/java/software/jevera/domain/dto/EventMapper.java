@@ -1,12 +1,20 @@
 package software.jevera.domain.dto;
 
 
-import org.mapstruct.Mapper;
 import software.jevera.domain.OnceTimeEvent;
 
-@Mapper(componentModel = "spring")
-public interface EventMapper {
+public class EventMapper {
+    public EventMapper() {
+    }
 
-    OnceTimeEvent toOnceTimeEvent(OnceEventDto onceEventDto);
-
+    public OnceTimeEvent toOnceTimeEvent(OnceEventDto onceEventDto) {
+        if (onceEventDto == null) {
+            return null;
+        } else {
+            OnceTimeEvent onceTimeEvent = new OnceTimeEvent();
+            onceTimeEvent.setDescription(onceEventDto.getDescription());
+            onceTimeEvent.setRoom(onceEventDto.getRoom());
+            return onceTimeEvent;
+        }
+    }
 }

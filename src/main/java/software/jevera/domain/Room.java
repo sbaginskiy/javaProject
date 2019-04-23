@@ -14,6 +14,4 @@ public class Room {
 
  String type;
 
-
-
 }
