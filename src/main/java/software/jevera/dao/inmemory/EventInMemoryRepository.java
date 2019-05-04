@@ -67,10 +67,10 @@ public class EventInMemoryRepository implements EventRrepository {
         return new ArrayList<>(events);
     }
 
-    @Override
-    public Event findById(Long id) {
-      List<Event> event = events.stream().filter(it -> it.getId().equals(id)).collect(Collectors.toList());
-      return event.get(0);
-    }
+//    @Override
+//    public Event findById(Long id) {
+//      List<Event> event = events.stream().filter(it -> it.getId().equals(id)).collect(Collectors.toList());
+//      return event.get(0);
+//    }
 
 }
