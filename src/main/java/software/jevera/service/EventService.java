@@ -29,63 +29,43 @@ import java.util.stream.Collectors;
 public class EventService {
 
     private final EventRrepository eventRrepository;
-
-    static private final String TIME_ALREADY_TAKEN = "Selected time already taken";
+    private static final String TIME_ALREADY_TAKEN = "Selected time already taken";
 
     public EventService (EventRrepository eventRrepository) {
         this.eventRrepository = eventRrepository;
     }
-//+
+
+
+    // ---------- one event save case
     public Event createOnceEvent (OnceTimeEvent onceTimeEvent, User user) {
         assertTimeForOnce(onceTimeEvent, TIME_ALREADY_TAKEN);
         onceTimeEvent.setEventOwner(user);
         return eventRrepository.save(onceTimeEvent);
     }
-//-
+
+    private void assertTimeForOnce(OnceTimeEvent event, String message) {
+        if (isTimeNotAvailable(getAllByDateAndRoom(event), event)) {
+            throw new BussinesException(message);
+        }
+    }
+
+    private List<Event> getAllByDateAndRoom(OnceTimeEvent event) {
+        return eventRrepository.findAllByDateAndRoom(event.getDate(), event.getRoom());
+    }
+// ---------
     public Event createPeriodicEvent (PeriodicTimeEvent periodicTimeEvent, User user) {
         assertTimeForPeriodic(periodicTimeEvent, TIME_ALREADY_TAKEN);
         periodicTimeEvent.setEventOwner(user);
         return eventRrepository.save(periodicTimeEvent);
     }
-//-
-    private void assertTimeForOnce(OnceTimeEvent event, String message) {
-        List<Event> checkList = new ArrayList<>();                                    // находит все ивенты с типом Once в тойже комнате и в тотже день что и новый ивент
-        checkList.addAll(getOnceEventsByDateAndRoom(event));                          // находит все ивенты с типом Periodic в тойже комнате и в тотже день что и новый ивент
-        checkList.addAll(getPeriodicEventsByDateAndRoom(event));                      // isTimeNotAvailable проходит по всем подходящим ивентам и проверят занято ли время если есть совпадения возвращает true
-        if (isTimeNotAvailable(checkList, event)) {
-            throw new BussinesException(message);
-       }
-    }
 
-//+
-    public List<Event> getOnceEventsByDateAndRoom (OnceTimeEvent event) {
-        return getAllOnceEvents().stream()
-                .map(it ->(OnceTimeEvent)it)
-                .filter(it -> it.getDate().equals(event.getDate()))
-                .filter(it -> it.getRoom().equals(event.getRoom()))
-                .collect(Collectors.toList());
-    }
 
-    //--пока пусть будет так, нужно переделать
-//+
-    public List<Event> getPeriodicEventsByDateAndRoom (OnceTimeEvent event) {
-        return getAllPeriodicEvents().stream()
-                .filter(it -> it.getDay().equals(event.getDate().getDayOfWeek().toString()))
-                .filter(it -> it.getRoom().equals(event.getRoom()))
-                .collect(Collectors.toList());
-    }
-    //----------------------------------------непонятно, слишком много
-//+
     public boolean isTimeNotAvailable (List<Event> eventCheckList, Event event) {
         return eventCheckList.stream().anyMatch(it -> (it.getTimeFrom().isAfter(event.getTimeFrom())
-
-                && it.getTimeFrom().isBefore(event.getTimeTo())) // false
-
+                && it.getTimeFrom().isBefore(event.getTimeTo())) // fals
                 || (it.getTimeTo().isAfter(event.getTimeFrom())
-
                 && it.getTimeTo().isBefore(event.getTimeTo())) ||
                 (it.getTimeFrom().isBefore(event.getTimeFrom()) && it.getTimeTo().isAfter(event.getTimeTo())));
-
     }
 //-    //-----
     public void assertTimeForPeriodic(PeriodicTimeEvent event, String message) {

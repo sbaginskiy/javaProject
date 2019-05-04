@@ -6,11 +6,10 @@ import software.jevera.dao.EventRrepository;
 import software.jevera.domain.Event;
 import software.jevera.domain.OnceTimeEvent;
 import software.jevera.domain.PeriodicTimeEvent;
+import software.jevera.domain.Room;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.time.LocalDate;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 
@@ -31,9 +30,30 @@ public class EventInMemoryRepository implements EventRrepository {
     }
 
     @Override
+    public List<Event> findAllByDateAndRoom(LocalDate date, Room room) {
+        List<Event> eventList = new ArrayList<>();
+        eventList.addAll(sortPeriodic(date, room));
+        eventList.addAll(sortOnce(date, room));
+        return eventList;
+    }
+
+    @Override
     public List<PeriodicTimeEvent> findAllPeriodic() {
         return events.stream().filter(it -> it instanceof PeriodicTimeEvent).map(PeriodicTimeEvent.class::cast)
                 .collect(Collectors.toList());
+    }
+
+
+    public List<PeriodicTimeEvent> sortPeriodic(LocalDate date, Room room) {
+        return findAllPeriodic().stream().filter(it -> it.getStartDate().isAfter(date))
+                .filter(it -> it.getEndDate().isBefore(date))
+                .filter(it -> it.getDay().equals(date.getDayOfWeek().toString()))
+                .filter(it -> it.getRoom().equals(room)).collect(Collectors.toList());
+    }
+    public List<OnceTimeEvent> sortOnce(LocalDate date, Room room) {
+        return findAllOnce().stream()
+                .filter(it -> it.getDate().equals(date))
+                .filter(it -> it.getRoom().equals(room)).collect(Collectors.toList());
     }
 
     @Override
@@ -49,7 +69,7 @@ public class EventInMemoryRepository implements EventRrepository {
 
     @Override
     public Event findById(Long id) {
-      List<Event> event = events.stream().filter(it -> it.getId() == id).collect(Collectors.toList());
+      List<Event> event = events.stream().filter(it -> it.getId().equals(id)).collect(Collectors.toList());
       return event.get(0);
     }
 
